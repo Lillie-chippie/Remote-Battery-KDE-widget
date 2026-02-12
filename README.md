@@ -1,6 +1,6 @@
 # Instrucciones: Monitor de Batería Remoto para KDE Plasma
 
-Este sistema te permite ver el nivel de batería de tu laptop en otra PC (ambas con Kubuntu/KDE Plasma).
+Este sistema te permite ver el nivel de batería de tu laptop en otra PC o VM(ambas con Kubuntu/KDE Plasma).
 
 ## 🚀 Instalación Rápida (Recomendado)
 
@@ -60,11 +60,7 @@ python3 battery_sender.py [IP_DE_TU_PC] --interval 10
 
 Para que no tengas que ejecutar los scripts manualmente cada vez:
 
-### En la VM (Receptor) - Autostart de KDE
-1. Abre "System Settings" -> "Startup and Shutdown" -> "Autostart".
-2. Haz clic en "+ Add" -> "+ Add Application...".
-3. En el comando, pon: `python3 /home/vibecode/DevS/batery_widget/battery_receiver.py`.
-4. ¡Listo! El receptor se iniciará solo al iniciar sesión.
+
 
 ### En la Laptop Real (Remitente)
 Puedes crear un alias o añadirlo al crontab (@reboot), pero lo más importante es la IP.
@@ -83,4 +79,3 @@ Como es una VM, su IP (`192.168.122.111`) podría cambiar si la apagas y la pren
 ## Solución de Problemas
 - **Firewall**: Asegúrate de que el puerto UDP 5555 esté abierto en el firewall de tu PC (`sudo ufw allow 5555/udp`).
 - **IP**: Ambas deben estar en la red de VirtIO (`192.168.122.x`).
-- **Procesos Fantasma**: Si ves mensajes de `127.0.0.1` en la VM, es porque hay un remitente de prueba corriendo localmente. Mátalo con `pkill -f battery_sender.py`.
