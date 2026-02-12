@@ -1,0 +1,20 @@
+{
+    "KPackageStructure": "Plasma/Applet",
+    "KPlugin": {
+        "Authors": [
+            {
+                "Email": "lylyakound@gmail.com",
+                "Name": "Lillie-Chippie"
+            }
+        ],
+        "Category": "Information Service",
+        "Description": "Monitor laptop battery from another PC",
+        "Icon": "battery-charging",
+        "Id": "org.kde.remote.battery",
+        "License": "GPL-2.0+",
+        "Name": "Remote Battery Monitor",
+        "Version": "1.0",
+        "Website": "https://lillie-chippie.github.io"
+    },
+    "X-Plasma-API-Minimum-Version": "6.0"
+}
